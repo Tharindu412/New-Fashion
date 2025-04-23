@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>New Fashion World</title>
+    <link  rel="stylesheet" href="homestyle.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+</head>
+    <script src= "Home.js"></script>
+<body>
+    
+        <div id="sidenav">
+            <a  href ="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Mens section</a>
+            <a href="#">Ladies section</a>
+            <a href="#">Kids section</a>
+            <a href="#">Cosmetics</a>
+        </div>
+
+        <div id="main">
+        <div class="topnav">
+            <ul>
+                <li class="hamberguricon" onclick="openNav()"><i class="fas fa-bars"></i></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick="toggleCartDropdown()"><i class="fa-solid fa-cart-shopping cart-icon"></i>
+                <span id="cart-count">0</span></a>
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <div id="cart-items"></div>
+                    <p id="cart-total" style="font-weight:bold;"></p>
+                    <button onclick="checkout()">Checkout</button>
+                </div>
+                </li>
+
+            </ul>
+        </div>
+    
+
+
+
+    <section class="hero">
+        <h1>"Find your Choice &</h1>
+        <h2>Make your Passion"</h2>
+
+        <button class="shopnow" onclick="shopnow()">Shop Now</button>
+        
+        <div id="shop" class="modal">
+           
+           
+            <span class="close" onclick="closeForm()">&times;</span>
+            <form class="modal-content" action="/action_page.php" method="post">
+                <h2 style="text-align: center;">Sign Up</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button class="btn2"type="submit">Submit</button>
+                <button class="btn3" type="button">Log In</button>
+
+                </form>
+
+        </div>
+       
+    </section>
+    
+    
+    <!----This is the Main -->
+
+    <section class="main">
+        <div class="sale">Sale Items</div>
+        <div class="slider-container">
+        <div class="cards">
+            <div class="card1">
+            <img src="blackshirt.png" class="img2">
+            <div class="container">
+                <p>Black Shirt</p>
+                <p style="text-decoration: line-through;">Price 4000/=</p>
+                <p>Price 3200/=</p>
+                <div class="reviewstars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="Addtocart" onclick="addToCart('Black Shirt',3200)"><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+               
+            </div>
+            </div>
+            <div class="card1">
+            <img src="shirt1.png" class="img2">
+            <div class="container">
+                <p>Kids Shirt</p>
+                <p style="text-decoration: line-through;">Price 2000/=</p>
+                <p>Price 1600/=</p>
+                <div class="reviewstars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p class="Addtocart" onclick="addToCart('Kids Shirt',1600)"><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            
+            </div>
+            </div>
+            <div class="card1">
+                <img src="trouser1.png" class="img2">
+                <div class="container">
+                    <p>Mens Trouser</p>
+                    <p style="text-decoration: line-through;">Price 5000/=</p>
+                    <p>Price 4000/=</p>
+                    <div class="reviewstars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="Addtocart" onclick="addToCart('Mens Trouser',4000)"><i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                </div>
+                </div>
+                <div class="card1">
+                    <img src="Trouser2.png" class="img2">
+                    <div class="container">
+                        <p>Mens Trouser</p>
+                        <p style="text-decoration: line-through;">Price 4000/=</p>
+                        <p>Price 3200/=</p>
+                        <div class="reviewstars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <p class="Addtocart" onclick="addToCart('Black Shirt',10)"><i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card1">
+                        <img src="Mens-Urban-Trousers-Black-.png" class="img2">
+                        <div class="container">
+                            <p>Mens Trousers</p>
+                            <p style="text-decoration: line-through;">Price 4800/=</p>
+                            <p>Price 3840/= </p>
+                            <div class="reviewstars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p class="Addtocart" onclick="addToCart('Black Shirt',10)"><i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="card1">
+                            <img src="gt1.png" class="img2">
+                            <div class="container">
+                                <p>Womens T shirts</p>
+                                <p style="text-decoration: line-through;">Price 2000/=</p>
+                                <p>Price 1600/=</p>
+                                <div class="reviewstars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <p class="Addtocart" onclick="addToCart('Black Shirt',10)"><i class="fa-solid fa-cart-shopping"></i></p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card1">
+                                <img src="gt2.png" class="img2">
+                                <div class="container">
+                                    <p>Womens T Shirts</p>
+                                    <p style="text-decoration: line-through;">Price 2000/=</p>
+                                    <p>Price 1600/=</p>
+                                </div>
+                                </div>
+                                <div class="card1">
+                                    <img src="gt3.png" class="img2">
+                                    <div class="container">
+                                        <p>Womens T Shirts</p>
+                                    </div>
+                                    </div>
+                                    <div class="card1">
+                                        <img src="gt4.png" class="img2">
+                                        <div class="container">
+                                            <p>Womens T Shirts</p>
+                                        </div>
+                                        </div>
+                                        <div class="card1">
+                                            <img src="gt5.png" class="img2">
+                                            <div class="container">
+                                                <p>Womens T Shirts</p>
+                                            </div>
+                                            </div>
+                                            <div class="card1">
+                                                <img src="gt6.png" class="img2">
+                                                <div class="container">
+                                                    <p>Womens T Shirts</p>
+                                                </div>
+                                                </div>
+                                                <div class="card1">
+                                                    <img src="gt7.png" class="img2">
+                                                    <div class="container">
+                                                        <p>Womens T Shirts</p>
+                                                    </div>
+                                                    </div>
+                                                    <div class="card1">
+                                                        <img src="gt8.png" class="img2">
+                                                        <div class="container">
+                                                            <p>Womens T Shirts</p>
+                                                        </div>
+                                                        </div>
+                </div>
+        </div>
+    </section>
+
+
+    <section class="Men">
+        <h2>Gen's Section</h2><br>
+        <a href="#" class="btn1">Explore more</a>
+    </section>
+
+    <section class="men-section">
+
+        <img src ="banner1.jpg" class="banner1">
+           
+            <div class="mencard-grid">
+            <div class="mcard1">
+                <!---- Add imgs for mens section -->
+                <img src="Blazer-removebg-preview.png">
+                
+            </div>
+            <div class="mcard1">
+                <img src="jean-removebg-preview.png">
+            </div>
+
+            <div class="mcard1">
+                <img src="wild-lion-balazs-solti-transparent-removebg-preview.png">
+             </div>
+             <div class="mcard1">
+                  <img src="men-cotton-shorts-removebg-preview.png">
+             </div>
+            </div>   
+    </section>
+
+    <section class="Women">
+        <h2>Ladies Section</h2><br>
+        <a href="#" class="btn1">Explore more</a>
+    </section>
+    <section class="ladies-section">
+
+        
+           
+            <div class="ladycard-grid">
+            <div class="mcard1">
+                
+                <img src="gtt2.png">
+            </div>
+            <div class="mcard1">
+                <img src="gtt1.png">
+            </div>
+
+            <div class="mcard1">
+                <img src="gtt3.png">
+             </div>
+             <div class="mcard1">
+                  <img src="gtt4.png">
+             </div>
+             <div class="mcard1">
+                <img src="Gown.png">
+           </div>
+           <div class="mcard1">
+            <img src="crop.png">
+       </div>
+            </div>
+            
+            <img src ="banner2.jpg" class="banner2">
+    </section>
+</div>
+</body>
+
+<footer>
+    <div class="container3">
+   <p style="font-size: 25px;font-weight: bold;">Follow Us On</p>
+   <ul>
+    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+   </ul>
+   <p style="font-size: 15px;">&copy;New Fasion 2025 | All Rights Reserved</p> 
+   </div>
+</footer>
+</html>
